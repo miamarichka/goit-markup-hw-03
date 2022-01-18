@@ -12,7 +12,11 @@
 }
 
 body {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
+}
+ /*reset and common*/
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
 }
 
 a {
@@ -20,7 +24,25 @@ a {
 }
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
+button{cursor: pointer;}
+
+.container{
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid red;
+  margin: auto;
+}
+.section{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.nav-list-item .current {color: var(--button-color);}
+
 
 .name-logo {
   font-weight: bold;
@@ -28,10 +50,17 @@ ul {
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
   color: var(--button-color);
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .name-studio {
   color: var(--main-text-color);
+}
+
+.nav-list, .contacts-list{
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .nav-list a {
@@ -61,6 +90,7 @@ ul {
 .hero {
   background-color: var(--additional-background-color);
 }
+
 .hero-title {
   color: var(--title-color);
   font-weight: 900;
@@ -69,6 +99,8 @@ ul {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  padding-top: 200px;
+  margin-bottom: 30px;
 }
 
 .button-hero {
@@ -81,14 +113,17 @@ ul {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+  margin-bottom: 200px;
 }
 
 /*advantages*/
 
-.advantage {
+/*hidden---------------------------------------------------------------------------------------------------*/
+.section-title.advantage {
   color: transparent;
   font-size: 0;
-}
+  margin: 0;
+} /*hidden-------------------------------------------------------------------------------------------------*/
 
 .advantage-title {
   color: var(--main-text-color);
@@ -97,6 +132,7 @@ ul {
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .advantage-description {
@@ -106,6 +142,7 @@ ul {
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
 }
+/*what we do*/  
 
 .section-title {
   color: var(--main-text-color);
@@ -114,6 +151,12 @@ ul {
   line-height: calc(42 / 36);
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.team{background-color:var(--button-portfolio);}
+
+.team-img{
+  margin-bottom: 30px;
 }
 
 .team-title {
@@ -123,6 +166,7 @@ ul {
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 10px;
 }
 
 .team-description {
@@ -131,13 +175,28 @@ ul {
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
+  padding-bottom: 30px;
 }
+
+
 
 /*footer*/
 
-.footer {
+footer {
   background-color: #2f303a;
 }
+.footer{
+padding-top: 60px;
+padding-bottom: 60px;
+}
+
+.footer-logo{
+  margin-bottom: 20px;
+}
+.location, .mail{
+  margin-bottom: 9px;
+}
+
 .studio {
   color: var(--title-color);
 }
@@ -176,7 +235,7 @@ ul {
   font-size: 0;
 }
 
-.button-projects button {
+.button-filer-list button {
   background-color: var(--button-portfolio);
   color: var(--portfolio-text-color);
   font-weight: 500;
@@ -184,25 +243,39 @@ ul {
   line-height: calc(26 / 16);
   text-align: center;
   letter-spacing: 0.03em;
-  cursor: pointer;
+  margin-bottom: 34px;
 }
-.button-projects button:hover,
-.button-projects button:focus {
+.button-filer-list button:hover,
+.button-filer-list button:focus {
   background-color: var(--button-color);
   color: var(--title-color);
 }
+.project-img{
+  margin-bottom: 0;
+} 
 
-.project-name {
+.project-title {
   color: var(--portfolio-text-color);
   font-weight: bold;
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 
-.project-type {
+.project-text {
   color: var(--additional-text-color);
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
+}
+
+.project-subtitle{
+  padding: 20px 24px;
+  border: 1px solid #EEEEEE;
+}
+
+.project-card{
+width: 370px;
+height: 404px;
 }

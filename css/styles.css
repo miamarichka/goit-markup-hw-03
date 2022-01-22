@@ -36,8 +36,12 @@ ul {
 button {
   cursor: pointer;
 }
+
 image {
   display: inline-block;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -64,13 +68,13 @@ image {
 }
 
 .name-logo {
+  display: block;
+  font-family: Raleway;
   font-weight: bold;
   font-size: 26px;
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
   color: var(--button-color);
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 
 .name-studio {
@@ -79,12 +83,12 @@ image {
 
 .nav-list,
 .contacts-list {
-  padding-top: 32px;
-  padding-bottom: 32px;
   display: flex;
 }
+
 .nav-list {
-  margin: auto;
+  display: flex;
+  align-items: center;
 }
 .nav-list-item:not(:last-child) {
   margin-right: 50px;
@@ -95,14 +99,18 @@ image {
 
 .container-header {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+}
+
+.header{
   border-bottom: 1px solid #ececec;
 }
 
 .logo-link {
-  display: block;
   margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .nav-header {
@@ -134,6 +142,9 @@ image {
 
 .hero {
   background-color: var(--additional-background-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
 }
 
 .hero-title {
@@ -144,7 +155,6 @@ image {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding-top: 200px;
   margin-bottom: 30px;
 }
 
@@ -159,28 +169,27 @@ image {
   text-align: center;
   justify-content: center;
   letter-spacing: 0.06em;
-  margin-bottom: 200px;
   padding: 10px 32px;
 }
 
-.container-hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 /*advantages*/
 
 .section-title.advantage {
-  color: transparent;
-  font-size: 0;
-  margin: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .advantage-list {
   display: flex;
-  flex-direction: row;
 }
 
 .advantage-item:not(:last-child) {
@@ -206,6 +215,9 @@ image {
 }
 
 /*--what we do--*/
+.img-section{
+  padding-top: 0;
+}
 
 .img-list {
   display: flex;
@@ -231,12 +243,15 @@ image {
   background-color: var(--button-portfolio);
 }
 
-.team-img {
-  margin-bottom: 30px;
-}
-
 .team-list {
   display: flex;
+}
+
+.team-item{
+  background-color: var(--background-color);
+}
+.team-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .team-title {
@@ -255,22 +270,17 @@ image {
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
+}
+.team-subtitile {
+  padding-top: 30px;
   padding-bottom: 30px;
-}
-.team-card {
-  background-color: var(--background-color);
-}
-
-.team-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 /*footer*/
 
-footer {
-  background-color: #2f303a;
-}
+
 .footer {
+  background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -278,8 +288,13 @@ footer {
 .footer-logo {
   margin-bottom: 20px;
 }
+
 .location,
 .mail {
+  margin-bottom: 9px;
+}
+
+.address-item:not(:last-child){
   margin-bottom: 9px;
 }
 
@@ -316,10 +331,17 @@ footer {
   background-color: var(--background-color);
 }
 
-.projects-portfolio,
-.portfolio-list {
-  color: transparent;
-  font-size: 0;
+.projects-title{
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .filter-link {
@@ -330,8 +352,6 @@ footer {
   line-height: calc(26 / 16);
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 34px;
-  margin-right: 8px;
   border-radius: 4px;
   border-color: transparent;
 }
@@ -343,18 +363,12 @@ footer {
 
 .button-filter-list {
   display: flex;
-  padding-left: 280px;
-  padding-right: 280px;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 .button-filter:not(:last-child) {
-  margin-right: 30px;
-}
-
-.project-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  margin-right: 8px;
 }
 
 .project-title {
